@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random number facts</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>Random number fact: {{ numberFact }}</div>
+      <div class="input-group">
+        <span class="input-group-text">Select your number</span>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Your number please"
+          aria-label="number"
+          [(ngModel)]="specificNumber"
+        />
+        <button
+          class="btn btn-primary"
+          (click)="getSpecificNumberFacts(specificNumber)"
+        >
+          Find facts for your number
+        </button>
+      </div>
+      <div>Specific number fact: {{ factForSpecificNumber }}</div>
+    </div>
+  </body>
+</html>
